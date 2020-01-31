@@ -41,9 +41,9 @@
         background-color: #f2f2f2;
         padding: 20px;
       }
-      
+
       button {
-         background-color: #4caf50;
+        background-color: #4caf50;
         color: white;
         padding: 12px 20px;
         border: none;
@@ -56,13 +56,18 @@
     <h3>Report a player</h3>
 
     <div class="container">
-     <form action="https://discordapp.com/api/webhooks/672895160564056064/8BjQtoZ9Rp3lQn3LSeuqm7Xt16nWnf8ZDdxvurjoO1qXSl54qc0wX4QAlUwPoCFgl5ED" method="POST">
+      <form
+        id="form"
+        action="https://discordapp.com/api/webhooks/672895160564056064/8BjQtoZ9Rp3lQn3LSeuqm7Xt16nWnf8ZDdxvurjoO1qXSl54qc0wX4QAlUwPoCFgl5ED"
+        method="POST"
+      >
         <label for="fname">First Name</label>
         <input
           type="text"
           id="fname"
           name="firstname"
           placeholder="Your name.."
+          maxlength="50"
         />
 
         <label for="lname">Last Name</label>
@@ -71,10 +76,8 @@
           id="lname"
           name="lastname"
           placeholder="Your last name.."
+          maxlength="50"
         />
-
-      
-        </select>
 
         <label for="subject">Subject</label>
         <textarea
@@ -82,12 +85,56 @@
           name="subject"
           placeholder="Report subject.."
           style="height:200px"
+          maxlength="1900"
         ></textarea>
 
         <input type="submit" value="Submit" />
-      <button onclick="href='admin.html'; ">Return</button> 
+        <a href="admin.html"><button>Return</button> </a>
       </form>
     </div>
-  <footer><p>Please put down your discord name, And the player's roblox user name you are reporting.</P></footer>
+    <footer>
+      <p>
+        Please put down your discord name, And the player's roblox user name you
+        are reporting.
+      </p>
+    </footer>
+    <script>
+      (function() {
+        const form = document.getElementById("form");
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          const fName = document.getElementById("fname").value.trim();
+          const lName = document.getElementById("lname").value.trim();
+          const body = {
+            embeds: [
+              {
+                color: 0xff0000,
+                title: "New Report",
+                fields: [
+                  {
+                    name: "First Name",
+                    value: fName,
+                    inline: true
+                  },
+                  {
+                    name: "Last Name",
+                    value: lName,
+                    inline: true
+                  },
+                  {
+                    name: "Subject",
+                    value: document.getElementById("subject").value.trim()
+                  }
+                ]
+              }
+            ]
+          };
+          let req = new XMLHttpRequest();
+          req.open(form.getAttribute("method"), form.getAttribute("action"));
+          req.setRequestHeader("Content-Type", "application/json");
+          req.send(JSON.stringify(body));
+        });
+      })();
+    </script>
   </body>
 </html>
