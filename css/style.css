@@ -135,7 +135,7 @@ hr {
   color: #ffff00;
 }
 
-#showcase11 {
+#showcase1 {
   margin-top: 100px;
   font-size: 55px;
   margin-bottom: 10px;
@@ -143,6 +143,18 @@ hr {
 
 #showcase1 p {
   font-size: 20px;
+}
+#showcase2 {
+  min-height: 400px;
+  background: url("../img/LAPD.gif") no-repeat 1px;
+  text-align: center;
+  color: #ffff00;
+}
+
+#showcase2 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
 }
 
 #newsletter {
