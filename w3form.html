@@ -61,7 +61,7 @@
         action="https://discordapp.com/api/webhooks/672925106011504650/elOKONuwVxYzMpjtbcpP8av9vnm0F6DcPtYaO1qiBYnWn_aKC4jk1voe8RfyZwEV5DDo"
         method="POST"
       >
-        <label for="fname">First Name</label>
+        <label for="fname">Username.</label>
         <input
           type="text"
           id="fname"
@@ -70,7 +70,7 @@
           maxlength="50"
         />
 
-        <label for="lname">Last Name</label>
+        <label for="lname">Username you are reporting.</label>
         <input
           type="text"
           id="lname"
@@ -83,7 +83,7 @@
         <textarea
           id="subject"
           name="subject"
-          placeholder="Report subject.."
+          placeholder="Report subject and add proof at the end (link pictures).."
           style="height:200px"
           maxlength="1900"
         ></textarea>
@@ -97,6 +97,7 @@
       <p>
         Please put down your discord name, And the player's roblox user name you
         are reporting.
+        (Discord is not required but recommended)
       </p>
     </footer>
     <script>
@@ -113,12 +114,12 @@
                 title: "New Report",
                 fields: [
                   {
-                    name: "First Name",
+                    name: "Username",
                     value: fName,
                     inline: true
                   },
                   {
-                    name: "Last Name",
+                    name: "Targeted username",
                     value: lName,
                     inline: true
                   },
