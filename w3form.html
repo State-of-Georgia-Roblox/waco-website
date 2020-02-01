@@ -136,7 +136,7 @@
           req.setRequestHeader("Content-Type", "application/json");
           req.send(JSON.stringify(body));
           req.onload = () => {
-    window.location.href = window.location.href.replace(/\/.-\.html/, '/admin.html');
+    window.location.href = window.location.href.replace(/\/.-\.html/, 'admin.html');
 };
         });
       })();
