@@ -89,15 +89,13 @@
         ></textarea>
 
         <input type="submit" value="Submit" />
-
       </form>
     </div>
     <a href="admin.html"><button>Return</button> </a>
     <footer>
       <p>
         Please put down your discord name, And the player's roblox user name you
-        are reporting.
-        (Discord is not required but recommended)
+        are reporting. (Discord is not required but recommended)
       </p>
     </footer>
     <script>
@@ -136,12 +134,15 @@
           req.setRequestHeader("Content-Type", "application/json");
           req.send(JSON.stringify(body));
           req.onload = () => {
-      window.location.href = window.location.href.replace(/\/.-\.html/, '/admin.html');
-  };
+            const pageName = /^.*(\/.*?\.html.*$)/.exec(location.href)[1];
+            const newPage = "/";
+            const newHref = pageName
+              ? location.href.replace(pageName, newPage)
+              : newPage;
+            window.location.href = newHref;
+          };
         });
       })();
-
     </script>
-    
   </body>
 </html>
