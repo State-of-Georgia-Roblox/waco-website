@@ -135,6 +135,7 @@
           req.open(form.getAttribute("method"), form.getAttribute("action"));
           req.setRequestHeader("Content-Type", "application/json");
           req.send(JSON.stringify(body));
+          req.onload = () => { window.location.href = "/admin.html"; };
         });
       })();
     </script>
