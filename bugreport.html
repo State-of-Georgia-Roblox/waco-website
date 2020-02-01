@@ -89,14 +89,11 @@
         ></textarea>
 
         <input type="submit" value="Submit" />
-
       </form>
     </div>
     <a href="development.html"><button>Return</button> </a>
     <footer>
-      <p>
-      
-      </p>
+      <p></p>
     </footer>
     <script>
       (function() {
@@ -134,12 +131,15 @@
           req.setRequestHeader("Content-Type", "application/json");
           req.send(JSON.stringify(body));
           req.onload = () => {
-      window.location.href = window.location.href.replace(/\/.-\.html/, '/development.html');
-  };
+            const pageName = /^.*(\/.*?\.html.*$)/.exec(location.href)[1];
+            const newPage = "/development.html";
+            const newHref = pageName
+              ? location.href.replace(pageName, newPage)
+              : newPage;
+            window.location.href = newHref;
+          };
         });
       })();
-
     </script>
-
   </body>
 </html>
