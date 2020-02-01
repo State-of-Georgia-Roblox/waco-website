@@ -135,7 +135,7 @@
           req.send(JSON.stringify(body));
           req.onload = () => {
             const pageName = /^.*(\/.*?\.html.*$)/.exec(location.href)[1];
-            const newPage = "/";
+            const newPage = "/development.html";
             const newHref = pageName
               ? location.href.replace(pageName, newPage)
               : newPage;
