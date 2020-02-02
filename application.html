@@ -71,7 +71,7 @@
           type="text"
           id="lname"
           name="lastname"
-          placeholder="Your last name.."
+          placeholder="Date you joined.."
           maxlength="50"
         />
 
@@ -79,19 +79,18 @@
         <textarea
           id="subject"
           name="subject"
-          placeholder="Wrrite a 250 word essay .."
+          placeholder="Write a 250 word essay .."
           style="height:200px"
-          maxlength="1900"
+          maxlength="2048"
         ></textarea>
 
         <input type="submit" value="Submit" />
       </form>
     </div>
-    <a href="admin.html"><button>Return</button> </a>
+    <a href="about.html"><button>Return</button> </a>
     <footer>
       <p>
-        Please put down your discord name, And the player's roblox user name you
-        are reporting. (Discord is not required but recommended)
+        The text is limited to 250 words
       </p>
     </footer>
     <script>
@@ -139,7 +138,7 @@
               completed++;
               if (completed < urls.length) return;
               const pageName = /^.*(\/.*?\.html.*$)/.exec(location.href)[1];
-              const newPage = "/admin.html";
+              const newPage = "/about.html";
               const newHref = pageName
                 ? location.href.replace(pageName, newPage)
                 : newPage;
