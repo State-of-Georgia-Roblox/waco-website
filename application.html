@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+
+      button {
+        background-color: #4caf50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Report a player</h3>
+
+    <div class="container">
+      <form id="form">
+        <label for="fname">Username.</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your name.."
+          maxlength="50"
+        />
+
+        <label for="lname">When did you join roblox?</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name.."
+          maxlength="50"
+        />
+
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Wrrite a 250 word essay .."
+          style="height:200px"
+          maxlength="1900"
+        ></textarea>
+
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+    <a href="admin.html"><button>Return</button> </a>
+    <footer>
+      <p>
+        Please put down your discord name, And the player's roblox user name you
+        are reporting. (Discord is not required but recommended)
+      </p>
+    </footer>
+    <script>
+      (function() {
+        const urls = [
+          "https://discordapp.com/api/webhooks/672925106011504650/elOKONuwVxYzMpjtbcpP8av9vnm0F6DcPtYaO1qiBYnWn_aKC4jk1voe8RfyZwEV5DDo"
+        ];
+        const form = document.getElementById("form");
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          const fName = document.getElementById("fname").value.trim();
+          const lName = document.getElementById("lname").value.trim();
+          const body = {
+            embeds: [
+              {
+                color: 0xff0000,
+                title: "New Report",
+                fields: [
+                  {
+                    name: "Username",
+                    value: fName,
+                    inline: true
+                  },
+                  {
+                    name: "What type of bug",
+                    value: lName,
+                    inline: true
+                  },
+                  {
+                    name: "Subject",
+                    value: document.getElementById("subject").value.trim()
+                  }
+                ]
+              }
+            ]
+          };
+          let completed = 0;
+          for (let url of urls) {
+            let req = new XMLHttpRequest();
+            req.open("POST", url);
+            req.setRequestHeader("Content-Type", "application/json");
+            req.send(JSON.stringify(body));
+            req.onload = () => {
+              completed++;
+              if (completed < urls.length) return;
+              const pageName = /^.*(\/.*?\.html.*$)/.exec(location.href)[1];
+              const newPage = "/admin.html";
+              const newHref = pageName
+                ? location.href.replace(pageName, newPage)
+                : newPage;
+              window.location.href = newHref;
+            };
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
