@@ -98,7 +98,11 @@
         are reporting. (Discord is not required but recommended)
       </p>
     </footer>
+    <script src="./militaryTime.js">
+
+    </script>
     <script>
+
       (function() {
         const form = document.getElementById("form");
         form.addEventListener("submit", e => {
@@ -109,7 +113,7 @@
             embeds: [
               {
                 color: 0xff0000,
-                title: "New Report",
+                title: "New Report"+ " " + getMilitaryTime(),
                 fields: [
                   {
                     name: "Username",
@@ -143,6 +147,9 @@
           };
         });
       })();
+    </script>
+
+    <script src="/militaryTime.js">
     </script>
   </body>
 </html>

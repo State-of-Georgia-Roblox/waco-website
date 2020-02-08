@@ -95,6 +95,11 @@
     <footer>
       <p></p>
     </footer>
+    
+    <script src="./militaryTime.js">
+
+    </script>
+
     <script>
       (function() {
         const form = document.getElementById("form");
@@ -106,7 +111,7 @@
             embeds: [
               {
                 color: 0xff0000,
-                title: "New Report",
+                title: "New Report"+ " " + getMilitaryTime(),
                 fields: [
                   {
                     name: "Username",
