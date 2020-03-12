@@ -1,88 +1,248 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="State of Georgia-ROBLOX" />
-    <meta name="keywords" content="No name yet" />
-    <meta name="author" content="MMV_Gaming" />
-    <title>Home</title>
-    <link rel="icon" href="download (1).png">
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div id="branding">
-          <h1><center>State of Georgia-ROBLOX</center></h1>
-        </div>
-        <nav>
-          <ul>
-            <a href="/">Home</a>
-          </ul>
-          <ul>
-            <a href="/development">Development</a>
-          </ul>
-          <ul>
-            <a href="/admin">Administrators</a>
-          </ul>
-          <ul>
-            <a href="/about">News</a>
-          </ul>
-          <ul>
-            <a href="">Events</a>
-          </ul>
-        </nav>
-      </div>
+<html>
+<title>SOG-Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body id="myPage">
+
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>State of Georgia</a>
+  <a href="#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Development</a>
+  <a href="#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Administration</a>
+  <a href="#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Departments</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button" title="Notifications">Infromation <i class="fa fa-caret-down"></i></button>
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="#" class="w3-bar-item w3-button">SOGPA</a>
+      <a href="#" class="w3-bar-item w3-button">Game infromation</a>
+
+    </div>
+  </div>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+    <a href="#team" class="w3-bar-item w3-button">Development</a>
+<a href="#pricing" class="w3-bar-item w3-button">Administration</a>
+    <a href="#contact" class="w3-bar-item w3-button">Departments</a>
+    <a href="#" class="w3-bar-item w3-button">Infromation</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity">
+  <img src="img/unknown.png" alt="boat" style="width:100%;min-height:350px;max-height:600px;">
+  <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+    <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-teal" title="State of Georiga">State of Georgia</button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-top">
+    <header class="w3-container w3-teal w3-display-container">
+      <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+      <h4></h4>
+      <h5><i class="fa fa-smile-o"></i></h5>
     </header>
-    <section id="showcase">
-      <div class="container">
-        <h1>State of Georgia-ROBLOX</h1>
-        <p>We are a ROBLOX group that is making a Role Play community.</p>
-      </div>
-    </section>
-    <hr />
-
-    <section id="boxes">
-      <div class="container">
-        <div class="box">
-          <img src="./img/D_iffusion.png" />
-          <h3>Founder</h3>
-          <p>D_iffusion</p>
-        </div>
-        <div class="box">
-          <img src="./img/Waco.png" />
-          <h3>Co_Founder</h3>
-          <p>waco_roblox</p>
-        </div>
-        <div class="box">
-          <img src="./img/Rom.png" />
-          <h3>Co_founder</h3>
-          <p>Romloxe</p>
-        </div>
-      </div>
-    </section>
-    <style>
-       button{
-               background-color: #4caf50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    
-    </style>
-    
-    <section id="boxes">
-       <div class="container">
-        <button onclick="window.location.href = 'https://www.roblox.com/groups/5496769/State-of-Georgia#!/about';">Join Our Group</button>
-      </div>
-    </section>
-
-    <footer>
-      <p>WE ARE NOT A STATE OFFICAL WEBSITE!</p>
-      <p>This is only for Roblox group purposes</p>
-      <p>State Of Georgia ROBLOX © 2020</p>
+    <div class="w3-container">
+      <p></p>
+      <p> <a class="w3-text-teal" href="/w3css/default.asp"></a> </p>
+    </div>
+    <footer class="w3-container w3-teal">
+      <p></p>
     </footer>
-  </body>
+  </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+<h2>Group Founders And Developers</h2>
+<p>Meet...</p>
+
+<div class="w3-row"><br>
+
+<div class="w3-quarter">
+  <img src="
+  img/D_iffusion.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>D_Iffusion</h3>
+  <p>Founder/Builder</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/Rom.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>Romloxe</h3>
+  <p>Cofounder/Scripter</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="img/Waco.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>waco_roblox</h3>
+  <p>Cofounder/Builder/Scripter</p>
+</div>
+
+<div class="w3-quarter">
+  <img src="
+  img/noob.png" alt="Boss" style="width:45%" class="w3-circle w3-hover-opacity">
+  <h3>CodeZeroGaming</h3>
+  <p>Builder</p>
+</div>
+
+
+</div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+<h2>Development</h2>
+<p></p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/snow.jpg" alt="Snow" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 1</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 2</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="/w3images/mountains.jpg" alt="Mountains" style="width:100%">
+  <div class="w3-container">
+  <h3>Customer 3</h3>
+  <h4>Trade</h4>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<!-- Administration -->
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="img/noob.png" alt="NorthernOps" style="width:45%" class="w3-circle w3-hover-opacity">
+  <div class="w3-container">
+  <h3>NorthernOps</h3>
+  <h4>Administrator</h4>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="img/Strange.png" alt="Strange_RBLX" style="width:45%" class="w3-circle w3-hover-opacity">
+  <div class="w3-container">
+  <h3>Strange_RBLX</h3>
+  <h4>Administrator</h4>
+  <p>Blablabla</P>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="img/real.png" alt="OfficerReal" style="width:45%" class="w3-circle w3-hover-opacity">
+  <div class="w3-container">
+  <h3>OfficerReal</h3>
+  <h4>Administrator</h4>
+  <p>Blablabla</p>
+  </div>
+  </div>
+</div>
+
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="img/Strange.png" alt="Strange_RBLX" style="width:45%" class="w3-circle w3-hover-opacity">
+  <div class="w3-container">
+  <h3>Open Position</h3>
+  <h4>Moderator</h4>
+  <p>Blablabla</P>
+  </div>
+  </div>
+</div>
+
+
+<!-- Image of location/map -->
+<img src="img/showcase.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us For Updates</h4>
+
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Instagram"><i class="fa fa-instagram"></i></a>
+
+
+  <div style="position:relative;bottom:100px;z-index:1;" class="w3-tooltip w3-right">
+    <span class="w3-text w3-padding w3-teal w3-hide-small">Go To Top</span>
+    <a class="w3-button w3-theme" href="#myPage"><span class="w3-xlarge">
+    <i class="fa fa-chevron-circle-up"></i></span></a>
+  </div>
+</footer>
+
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
 </html>
